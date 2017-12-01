@@ -1,10 +1,9 @@
-# GitHub Project Base
+# Spirograph-with-turtle
 
 [![unlicense](https://img.shields.io/badge/un-license-brightgreen.svg)](http://unlicense.org "The Unlicense") [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme "RichardLitt/standard-readme")
 
-> Standardized base git project for GitHub, with all the bells and whistles 
+> Spirograph elements made with Python Turtle library
 
-In accordance with [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "Don't repeat yourself"), this project is a base git repo with all the GitHub recommended goodies: [README](README.md "README"), [.gitignore](.gitignore "gitignore"), [Code of Conduct](CODE_OF_CONDUCT.md "Contributor Covenant"), and [contribution guidelines](docs/contributing.md "Contributing"), plus [issue](docs/issue_template.md "Issue template") and [pull request](docs/pull_request_template.md "Pull request template") templates.
 
 ## Table of Contents
 
