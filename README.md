@@ -38,7 +38,7 @@ In accordance with [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "
 
 ## Contribute
 
-> This project subscribes to the [Contributor Covenant](CODE_OF_CONDUCT.md "Code of Conduct").
+> Contributors to this project are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md "Code of Conduct").
 
 I welcome [issues](docs/issue_template.md "Issue template"), but I prefer [pull requests](dosc/pull_request_template.md "Pull request template")! See the [contribution guidelines](docs/contributing.md "Contributing") for more information.
 
