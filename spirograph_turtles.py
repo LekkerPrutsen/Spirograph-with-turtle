@@ -117,6 +117,27 @@ def purple_pentagons():
         t.right(5)
 
 
+def silver_angles():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    clrs = ["Black", "Dimgray", "Gray", "Darkgray",
+            "Silver", "Lightgrey", "Gainsboro"]
+    h = 20
+    a = 10
+    for i in range(380):
+        t.pencolor(clrs[i % len(clrs)])
+        for j in range(3):
+            t.forward(h)
+            t.left(120)
+        t.penup()
+        t.forward(5)
+        t.right(a)
+        t.pendown()
+        h *= 1.008
+        a *= 0.995
+
+
 def print_usage():
     print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
     print("    [-a]: animate the drawing")
@@ -124,12 +145,14 @@ def print_usage():
     print("        blue_shades")
     print("        hurricane")
     print("        purple_pentagons")
+    print("        silver_angles")
+    sys.exit()
 
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """
     if (len(sys.argv) < 2 or
-            (sys.argv[1] == '-a' and len(sys.argv) < 4) or
+            (sys.argv[1] == '-a' and len(sys.argv) < 3) or
             (len(sys.argv) > 3)):
         print_usage()
 
@@ -144,6 +167,8 @@ if __name__ == "__main__":
         hurricane()
     elif sys.argv[drawing] == 'purple_pentagons':
         purple_pentagons()
+    elif sys.argv[drawing] == 'silver_angles':
+        silver_angles()
     else:
         sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
 
