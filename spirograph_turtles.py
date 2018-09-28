@@ -71,12 +71,59 @@ def hurricane():
         t.pendown()
 
 
+def purple_pentagons():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    h = 15
+    for j in range(18):
+        for i in range(5):
+            t.forward(h)
+            t.right(75)
+        t.forward(10)
+        t.right(5)
+    t.penup()
+    t.goto(-33, 40)
+    t.pendown()
+    h = 100
+    t.pencolor("plum")
+    for j in range(18):
+        for i in range(5):
+            t.forward(h)
+            t.right(75)
+        t.forward(10)
+        t.right(5)
+    t.penup()
+    t.goto(-72, 88)
+    t.pendown()
+    h = 200
+    t.pencolor("indigo")
+    for j in range(18):
+        for i in range(5):
+            t.forward(h)
+            t.right(75)
+        t.forward(10)
+        t.right(5)
+    t.penup()
+    t.goto(-143, 173)
+    t.pendown()
+    h = 380
+    t.pencolor("blueviolet")
+    for j in range(18):
+        for i in range(5):
+            t.forward(h)
+            t.right(75)
+        t.forward(10)
+        t.right(5)
+
+
 def print_usage():
     print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
     print("    [-a]: animate the drawing")
     print("    <drawing>: one of")
     print("        blue_shades")
     print("        hurricane")
+    print("        purple_pentagons")
 
 
 if __name__ == "__main__":
@@ -95,6 +142,8 @@ if __name__ == "__main__":
         blue_shades()
     elif sys.argv[drawing] == 'hurricane':
         hurricane()
+    elif sys.argv[drawing] == 'purple_pentagons':
+        purple_pentagons()
     else:
         sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
 
