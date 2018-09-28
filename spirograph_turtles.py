@@ -76,8 +76,8 @@ def purple_pentagons():
 
     t.speed(0)
     h = 15
-    for j in range(18):
-        for i in range(5):
+    for i in range(18):
+        for j in range(5):
             t.forward(h)
             t.right(75)
         t.forward(10)
@@ -87,8 +87,8 @@ def purple_pentagons():
     t.pendown()
     h = 100
     t.pencolor("plum")
-    for j in range(18):
-        for i in range(5):
+    for i in range(18):
+        for j in range(5):
             t.forward(h)
             t.right(75)
         t.forward(10)
@@ -98,8 +98,8 @@ def purple_pentagons():
     t.pendown()
     h = 200
     t.pencolor("indigo")
-    for j in range(18):
-        for i in range(5):
+    for i in range(18):
+        for j in range(5):
             t.forward(h)
             t.right(75)
         t.forward(10)
@@ -109,8 +109,8 @@ def purple_pentagons():
     t.pendown()
     h = 380
     t.pencolor("blueviolet")
-    for j in range(18):
-        for i in range(5):
+    for i in range(18):
+        for j in range(5):
             t.forward(h)
             t.right(75)
         t.forward(10)
@@ -125,7 +125,7 @@ def silver_angles():
             "Silver", "Lightgrey", "Gainsboro"]
     h = 20
     a = 10
-    for i in range(380):
+    for i in range(420):
         t.pencolor(clrs[i % len(clrs)])
         for j in range(3):
             t.forward(h)
@@ -138,6 +138,20 @@ def silver_angles():
         a *= 0.995
 
 
+def square_shell():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    t.pencolor("MediumAquamarine")
+    h = 10
+    for i in range(360):
+        for j in range(4):
+            t.forward(h)
+            t.right(90)
+        t.right(3)
+        h *= 1.01
+
+
 def print_usage():
     print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
     print("    [-a]: animate the drawing")
@@ -146,6 +160,7 @@ def print_usage():
     print("        hurricane")
     print("        purple_pentagons")
     print("        silver_angles")
+    print("        square_shell")
     sys.exit()
 
 
@@ -169,6 +184,8 @@ if __name__ == "__main__":
         purple_pentagons()
     elif sys.argv[drawing] == 'silver_angles':
         silver_angles()
+    elif sys.argv[drawing] == 'square_shell':
+        square_shell()
     else:
         sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
 
