@@ -217,9 +217,9 @@ def windmill():
 
 
 def print_usage():
-    print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
-    print("    [-a]: animate the drawing")
-    print("    <drawing>: one of")
+    print("Usage: python[3] " + sys.argv[0] + " [-a] " + "<drawing>")
+    print("    -a      : animate the drawing (default no animation)")
+    print("    drawing : one of")
     print("        blue_shades")
     print("        donut")
     print("        hurricane")
