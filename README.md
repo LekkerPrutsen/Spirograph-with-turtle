@@ -1,39 +1,34 @@
-# Spirograph-with-turtle
+# python-spirograph-turtle
 
-[![unlicense](https://img.shields.io/badge/un-license-brightgreen.svg)](http://unlicense.org "The Unlicense") [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme "RichardLitt/standard-readme")
+[![AGPL v3.0](https://img.shields.io/badge/license-AGPL%20v3.0-blue.svg)](LICENSE) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme "RichardLitt/standard-readme")
 
-> Spirograph elements made with Python Turtle library
-
+> Spirograph elements made with the python `turtle` library
 
 ## Table of Contents
 
-- [Security](#security)
 - [Background](#background)
-- [Install](#install)
 - [Usage](#usage)
-- [API](#api)
 - [Contribute](#contribute)
 - [License](#license)
 
-## Security
-
-### Optional sections
-
 ## Background
 
-### Optional sections
-
-## Install
-
-### Optional sections
+Thanks to [@LekkerPrusten](https://github.com/LekkerPrutsen) for the ideas in his [Spirograph-with-turtle](https://github.com/LekkerPrutsen/Spirograph-with-turtle) repository.
 
 ## Usage
-
-### Optional sections
-
-## API
-
-### Optional sections
+```
+Usage: python[3] spirograph_turtles.py [-a] <drawing>
+	-a      : animate the drawing (default no animation)
+	drawing : one of
+		blue_shades
+		donut
+		hurricane
+		purple_pentagons
+		silver_angles
+		square_shell
+		sunflower
+		windmill
+```
 
 ## Contribute
 
@@ -45,4 +40,4 @@ I welcome [issues](docs/issue_template.md "Issue template"), but I prefer [pull 
 
 ## License
 
-This code is [set free](LICENSE).
+This repository is copyright 2018 [@nstickney](https://github.com/nstickney) and released under the [GNU Affero General Public License, v3.0](LICENSE). However, some portions may be copyright other owners.
