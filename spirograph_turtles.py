@@ -11,7 +11,7 @@ import sys
 import turtle
 
 
-def blueShades():
+def blue_shades():
     t = turtle.Turtle()
 
     t.speed(0)
@@ -20,7 +20,7 @@ def blueShades():
             "MediumSlateBlue", "CornflowerBlue", "DodgerBlue", "DeepskyBlue",
             "LightSkyBlue", "SkyBlue", "LightBlue"]
 
-    for j in range(120):
+    for i in range(120):
         t.forward(5)
         t.right(3)
         c = 30
@@ -41,17 +41,62 @@ def blueShades():
         t.pendown()
 
 
-def main(animate):
-    """ Main entry point of the app """
-    if not animate:
-        turtle.tracer(0)
-    blueShades()
-    turtle.update()
-    turtle.exitonclick()
+def hurricane():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    clrs = ["Darkred", "Firebrick", "Crimson", "IndianRed"]
+
+    for i in range(120):
+        t.forward(5)
+        t.right(3)
+        c = 40
+        f = 70
+        h = 3
+        t.pencolor(clrs[i % 4])
+        for i in range(14):
+            t.circle(c)
+            t.left(90)
+            t.penup()
+            t.forward(f)
+            t.right(90)
+            t.forward(h)
+            t.pendown()
+            c *= 0.8
+            f *= 0.8
+            h *= 1.2
+            t.circle(c)
+        t.penup()
+        t.goto(0, 0)
+        t.pendown()
+
+
+def print_usage():
+    print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
+    print("    [-a]: animate the drawing")
+    print("    <drawing>: one of")
+    print("        blue_shades")
+    print("        hurricane")
 
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """
-    if len(sys.argv) > 1 and sys.argv[1] == '-a':
-        main(True)
-    main(False)
+    if (len(sys.argv) < 2 or
+            (sys.argv[1] == '-a' and len(sys.argv) < 4) or
+            (len(sys.argv) > 3)):
+        print_usage()
+
+    drawing = 2
+    if sys.argv[1] != '-a':
+        turtle.tracer(0)
+        drawing -= 1
+
+    if sys.argv[drawing] == 'blue_shades':
+        blue_shades()
+    elif sys.argv[drawing] == 'hurricane':
+        hurricane()
+    else:
+        sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
+
+    turtle.update()
+    turtle.exitonclick()
