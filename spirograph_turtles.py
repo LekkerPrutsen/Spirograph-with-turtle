@@ -41,6 +41,23 @@ def blue_shades():
         t.pendown()
 
 
+def donut():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    for i in range(120):
+        t.forward(3)
+        t.left(3)
+        t.pendown()
+        t.pencolor("coral")
+        t.circle(100)
+        t.right(180)
+        t.pencolor("peachpuff")
+        t.circle(100)
+        t.right(180)
+        t.penup()
+
+
 def hurricane():
     t = turtle.Turtle()
 
@@ -204,6 +221,7 @@ def print_usage():
     print("    [-a]: animate the drawing")
     print("    <drawing>: one of")
     print("        blue_shades")
+    print("        donut")
     print("        hurricane")
     print("        purple_pentagons")
     print("        silver_angles")
@@ -227,6 +245,8 @@ if __name__ == "__main__":
 
     if sys.argv[drawing] == 'blue_shades':
         blue_shades()
+    elif sys.argv[drawing] == 'donut':
+        donut()
     elif sys.argv[drawing] == 'hurricane':
         hurricane()
     elif sys.argv[drawing] == 'purple_pentagons':
