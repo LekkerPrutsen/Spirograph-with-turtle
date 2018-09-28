@@ -175,6 +175,30 @@ def sunflower():
         length /= 1.5
 
 
+def windmill():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    turtle.colormode(255)
+    r = 108
+    g = 45
+    b = 12
+    for i in range(18):
+        t.pencolor((r, g, b))
+        for j in range(36):
+            t.forward(100)
+            t.right(90)
+            t.forward(30)
+            t.right(100)
+            t.forward(101.118742)
+        t.penup()
+        t.forward(45)
+        t.right(20)
+        t.pendown()
+        r += 8
+        g += 4
+
+
 def print_usage():
     print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
     print("    [-a]: animate the drawing")
@@ -185,6 +209,7 @@ def print_usage():
     print("        silver_angles")
     print("        square_shell")
     print("        sunflower")
+    print("        windmill")
     sys.exit()
 
 
@@ -212,6 +237,8 @@ if __name__ == "__main__":
         square_shell()
     elif sys.argv[drawing] == 'sunflower':
         sunflower()
+    elif sys.argv[drawing] == 'windmill':
+        windmill()
     else:
         sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
 
