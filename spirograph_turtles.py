@@ -152,6 +152,29 @@ def square_shell():
         h *= 1.01
 
 
+def sunflower():
+    t = turtle.Turtle()
+
+    t.speed(0)
+    clrs = ["saddlebrown", "saddlebrown", "gold", "gold",
+            "darkorange", "forestgreen", "forestgreen"]
+    length = 280
+    a = 5
+
+    for i in range(7):
+        t.pencolor(clrs[0 - (i % len(clrs) + 1)])
+        for j in range(72):
+            t.left(90)
+            t.forward(length)
+            t.circle(15)
+            t.right(180)
+            t.forward(length)
+            t.left(90)
+            t.forward(2)
+            t.right(a)
+        length /= 1.5
+
+
 def print_usage():
     print("Usage: python" + sys.argv[0] + " [-a] " + "<drawing>")
     print("    [-a]: animate the drawing")
@@ -161,6 +184,7 @@ def print_usage():
     print("        purple_pentagons")
     print("        silver_angles")
     print("        square_shell")
+    print("        sunflower")
     sys.exit()
 
 
@@ -186,6 +210,8 @@ if __name__ == "__main__":
         silver_angles()
     elif sys.argv[drawing] == 'square_shell':
         square_shell()
+    elif sys.argv[drawing] == 'sunflower':
+        sunflower()
     else:
         sys.exit("ERROR: No such drawing (" + sys.argv[drawing] + ")")
 
